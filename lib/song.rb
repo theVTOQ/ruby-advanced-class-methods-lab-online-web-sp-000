@@ -49,4 +49,8 @@ class Song
     song.artist = split[0].chomp(".mp3")
     song
   end
+
+  def create_from_filename(filename)
+    new_from_filename(filename).save
+  end
 end
