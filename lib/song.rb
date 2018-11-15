@@ -50,7 +50,7 @@ class Song
     split = filename.split(" - ")
     song = self.new
     song.name = split[1]
-    song.artist = split[0].chomp(".mp3")
+    song.artist_name = split[0].chomp(".mp3")
     song
   end
 
