@@ -42,7 +42,7 @@ class Song
     @@all
   end
 
-  def new_from_filename(filename)
+  def self.new_from_filename(filename)
     split = filename.split(" - ")
     song = self.new
     song.name = split[1]
@@ -50,7 +50,11 @@ class Song
     song
   end
 
-  def create_from_filename(filename)
+  def self.create_from_filename(filename)
     new_from_filename(filename).save
+  end
+
+  def self.destroy_all
+    @@all.clear
   end
 end
