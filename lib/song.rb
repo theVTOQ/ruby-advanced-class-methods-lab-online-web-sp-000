@@ -36,4 +36,9 @@ class Song
       return existing_song
     end
   end
+
+  def self.alphabetical
+    @@all.sort!
+    @@all
+  end
 end
