@@ -47,5 +47,6 @@ class Song
     song = self.new
     song.name = split[1]
     song.artist = split[0].chomp(".mp3")
+    song
   end
 end
